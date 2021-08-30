@@ -1,0 +1,34 @@
+Query con GROUP BY
+
+1. Contare quanti iscritti ci sono stati ogni anno
+SELECT enrolment_date, COUNT(*)
+FROM `students`
+GROUP BY `enrolment_date`
+
+2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio MIGLIORARE
+SELECT COUNT(*)
+FROM `teachers`
+GROUP BY `office_address`
+
+3. Calcolare la media dei voti di ogni appello d'esame SBAGLIATO
+SELECT COUNT(*)
+FROM `exam_student`
+GROUP BY AVG(`vote`)
+
+4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+SELECT COUNT(*)
+FROM `degrees`
+GROUP BY `department_id`
+
+Query con JOIN
+
+1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia SBAGLIATO
+SELECT `students`.`id`, `students`.`surname`, `students`.`name`, `degrees`.`name`
+FROM `students`
+INNER JOIN `students` ON `students`.`degree_id` = `degrees`.`name`
+
+2. Selezionare tutti i Corsi di Laurea del Dipartimento di Neuroscienze
+SELECT *
+FROM departments
+
+Finirò l'esercizio più tardi, devo rivedere delle cose sul JOIN
