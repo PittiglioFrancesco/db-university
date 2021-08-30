@@ -33,6 +33,6 @@ SELECT COUNT(*)
 FROM `departments`;
 
 8. Quanti sono gli insegnanti che non hanno un numerodi telefono?
-SELECT *
+SELECT COUNT(*)
 FROM `teachers`
 WHERE `phone` IS NULL;
